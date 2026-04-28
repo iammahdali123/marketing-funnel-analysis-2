@@ -3,8 +3,6 @@ from typing import Dict, List
 
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
 
 FUNNEL_STAGES = ["awareness", "interest", "consideration", "intent", "purchase"]
 STAGE_ORDER = {stage: idx for idx, stage in enumerate(FUNNEL_STAGES)}
@@ -47,7 +45,7 @@ def predict_churn_probability(features: Dict) -> float:
     """
     Heuristic-based churn probability.
 
-    A real deployment would train the RandomForestClassifier on historical
+    A real deployment would train a RandomForestClassifier on historical
     labelled data; here we derive a deterministic score from the features
     so that the endpoint is always meaningful even without a pre-trained model.
     """
