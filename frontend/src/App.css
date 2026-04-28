@@ -1,0 +1,47 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.app-header h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.app-header nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.app-header nav button {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.app-header nav button:hover,
+.app-header nav button.active {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+}
